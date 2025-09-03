@@ -10,6 +10,10 @@
 
     {{-- Lisa uus ülesanne (nupp) --}}
 
+    <div class="mb-4">
+        <a href="" class="inline-block bg-green-400 text-black px-4 py-2 rounded hover:bg-green-500">Lisa uus ülesanne</a>
+    </div>
+
     {{-- Nimekiri --}}
     <div class="grid gap-3">
         @forelse ($todos as $todo )
