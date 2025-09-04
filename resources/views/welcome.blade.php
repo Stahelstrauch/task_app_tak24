@@ -6,12 +6,18 @@
 
     <h1 class="text-2xl font-bold mb-4">Ülesannete nimekiri</h1>
 
-    {{-- Teated --}}
+    {{-- Teated - kui tingimus tõene, siis TodoControllerist tulev Ülesanne lisatud ilmub lehele --}}
+    @if (session('success'))
+        <div class="mb-4 p-3 bg-green-100 text-green-700 rounded">
+            {{ session('success') }}
+        </div>
+        
+    @endif
 
     {{-- Lisa uus ülesanne (nupp) --}}
 
     <div class="mb-4">
-        <a href="" class="inline-block bg-green-400 text-black px-4 py-2 rounded hover:bg-green-500">Lisa uus ülesanne</a>
+        <a href="{{ route('create') }}" class="inline-block bg-green-400 text-black px-4 py-2 rounded hover:bg-green-500">Lisa uus ülesanne</a>
     </div>
 
     {{-- Nimekiri --}}
