@@ -61,6 +61,11 @@ class TodoController extends Controller {
     public function toggle(Todo $task) {
         //Muuda väärtus vastupidaiseks, ! on eitus ei läheb jahiks, jah, eiks.
         $task->is_completed = ! $task->is_completed;
+
+        // Iga kord, kui olek muutub, suurenda counterit
+        $task->counter += 1;
+        //$task->increment('counter); See on laraveli variant
+
         //Salvesta kirje
         $task->save();
 

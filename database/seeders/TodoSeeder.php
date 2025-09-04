@@ -31,6 +31,7 @@ class TodoSeeder extends Seeder
                 'description' => $todo['description'],
                 'is_completed' => fake()->boolean(30), //Ligikaudu 30% on true, 70% false
                 //'is_completed' => false,  //kõik on valed
+                'counter' => 0, //kui tahad randomit siis rand(0,10))
                 'created_at' => now(),
                 'updated_at' => now(),
 

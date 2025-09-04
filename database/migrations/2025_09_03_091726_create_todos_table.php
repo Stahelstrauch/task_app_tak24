@@ -18,6 +18,8 @@ return new class extends Migration {
 
             $table->boolean('is_completed')->default(false); //Tõeväärtus - kas ülesanne on tehtud jah/ei, vaikimisi on "EI"
 
+            $table->integer('counter')->default(0);
+
             $table->timestamps(); // seda rida kasutab nii update kui ka added
         });
     }

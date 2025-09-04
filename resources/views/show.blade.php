@@ -34,6 +34,12 @@
             </form>
             </td>
         </tr>
+            
+        <tr>
+            <th class="border px-4 py-2 text-left w-40 bg-gray-50">Lugeja</th>
+            <td class="border px-4 py-2">{{$todo->counter}}</td>
+        </tr>
+
         <tr>
             <th class="border px-4 py-2 text-left w-40 bg-gray-50">Loodud</th>
             <td class="border px-4 py-2">{{$todo->created_at->diffForHumans()}}</td>
